@@ -3,5 +3,5 @@ startCommand = "/bin/bash -c \"/bin/ttyd -p $PORT -c $USERNAME:$PASSWORD /bin/ba
 numReplicas = 1
 
 [deploy.resources]
-memoryMb = 128
-vcpus = 0.5
+memoryMb = 256
+vcpus = 1
