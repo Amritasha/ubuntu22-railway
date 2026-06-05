@@ -1,7 +1,7 @@
 [deploy]
-startCommand = "/bin/bash -c \"echo \\\"export PS1='\\\\[\\\\033[01;32m\\\\]$USERNAME@\\\\h\\\\[\\\\033[00m\\\\]:\\\\[\\\\033[01;34m\\\\]\\\\w\\\\[\\\\033[00m\\\\]\\\\$ '\\\" >> /root/.bashrc && /bin/ttyd -p $PORT -c $USERNAME:$PASSWORD /bin/bash\""
+startCommand = "/bin/bash -c \"/bin/ttyd -p $PORT -c $USERNAME:$PASSWORD /bin/bash\""
+numReplicas = 1
 
-[variables]
-PORT = { default = "7681", description = "Port ttyd listens on (Railway proxies HTTP here)" }
-USERNAME = { description = "Login username for the web terminal" }
-PASSWORD = { description = "Login password for the web terminal" }
+[deploy.resources]
+memoryMb = 128
+vcpus = 0.5
