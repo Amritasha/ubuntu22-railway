@@ -5,3 +5,7 @@ numReplicas = 1
 [deploy.resources]
 memoryMb = 256
 vcpus = 1
+
+[[volumes]]
+mountPath = "/root"
+name = "ubuntu22-data"
